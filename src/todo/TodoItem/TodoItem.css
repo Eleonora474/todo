@@ -1,0 +1,76 @@
+* {
+  box-sizing: border-box;
+}
+
+.checkbox-container {
+  display: flex;
+  align-items: center;
+}
+
+.checkbox-container label {
+  display: flex;
+  cursor: pointer;
+  align-items: center;
+}
+
+.checkbox-container input[type='checkbox'] {
+  cursor: pointer;
+  opacity: 0;
+  position: absolute;
+}
+
+.checkbox-container label::before {
+  content: '';
+  width: 1em;
+  height: 1em;
+  border-radius: 1em;
+  margin-right: 0.5em;
+  border: 0.05em solid #cbe558;
+}
+
+.checkbox-container label:hover::before,
+.checkbox-container input[type='checkbox']:hover + label::before {
+  background-color: #cbe55856;
+}
+
+.checkbox-container input[type='checkbox']:focus + label::before {
+  box-shadow: 0 0 15px #cbe558;
+}
+
+.checkbox-container input[type='checkbox']:checked + label::before {
+  content: '\002714';
+  background-color: #cbe558;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+.action-buttons {
+  display: flex;
+  align-items: center;
+}
+
+.action-buttons button {
+  border: none;
+  background-color: transparent;
+  padding-left: 12px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  outline: none;
+  box-shadow: none !important;
+}
+
+.rm {
+  background-image: url('./delete.svg');
+  margin-left: 1em;
+}
+
+.edit {
+  background-image: url('./edit.svg');
+  background-size: cover;
+  padding-left: 21px !important;
+  padding-bottom: 17px !important;
+}
