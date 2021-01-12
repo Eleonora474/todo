@@ -31,15 +31,18 @@ export default function Modal({ editData, closeModal, isOpen, onSave }) {
       className="modal"
     >
       <div className="modal-content">
-        <div>
+        <div class="modal-header">
+          <h2>Редактирование задачи</h2>
+          <span onClick={closeModal} className="close">
+            &times;
+          </span>
+        </div>
+        <div class="modal-body">
           <input className="input" {...input.bind} />
           <button className="btn submit" onClick={onSubmit}>
-            OK
+            Сохранить
           </button>
         </div>
-        <span onClick={closeModal} className="close">
-          &times;
-        </span>
       </div>
     </div>
   )
