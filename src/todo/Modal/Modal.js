@@ -31,13 +31,13 @@ export default function Modal({ editData, closeModal, isOpen, onSave }) {
       className="modal"
     >
       <div className="modal-content">
-        <div class="modal-header">
+        <div className="modal-header">
           <h2>Редактирование задачи</h2>
           <span onClick={closeModal} className="close">
             &times;
           </span>
         </div>
-        <div class="modal-body">
+        <div className="modal-body">
           <input className="input" {...input.bind} />
           <button className="btn submit" onClick={onSubmit}>
             Сохранить

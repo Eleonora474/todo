@@ -2,6 +2,7 @@ import React, { useContext } from 'react'
 import PropTypes from 'prop-types'
 import Context from '../context'
 import './TodoItem.css'
+import ReactTooltip from 'react-tooltip'
 
 const styles = {
   li: {
@@ -35,8 +36,20 @@ function TodoItem({ todo, index, onChange, openModal }) {
         <label htmlFor={todo.id}>{todo.title}</label>
       </div>
       <div className="action-buttons">
-        <button className="btn edit" onClick={openModal.bind(null, todo)} />
-        <button className="btn rm" onClick={removeTodo.bind(null, todo.id)} />
+        <button
+          className="btn edit"
+          onClick={openModal.bind(null, todo)}
+          data-tip="Редактировать"
+          data-for="main"
+        />
+        <button
+          className="btn rm"
+          onClick={removeTodo.bind(null, todo.id)}
+          data-tip="Удалить"
+          data-for="main"
+        />
+
+        <ReactTooltip id="main" place="top" type="dark" effect="solid" />
       </div>
     </li>
   )
