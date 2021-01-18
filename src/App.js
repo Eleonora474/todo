@@ -70,13 +70,20 @@ function App() {
   }
 
   function removeTodo(id) {
-    setMonthTodos((prevMonthTodos) => {
-      return {
-        ...prevMonthTodos,
-        [currentDate.day]: prevMonthTodos[currentDate.day].filter(
-          (todo) => todo.id !== id
-        ),
-      }
+    setMonthTodos(prevMonthTodos => {
+      const newMonthTodos = {}
+      Object.keys(prevMonthTodos).forEach(function (k) {
+        prevMonthTodos[k].forEach(function (t) {
+          let hash = Object.assign(t)
+          if (hash.id !== id) {
+            if (!newMonthTodos[k]) {
+              newMonthTodos[k] = []
+            }
+            newMonthTodos[k].push(hash)
+          }
+        })
+      })
+      return newMonthTodos
     })
   }
 
