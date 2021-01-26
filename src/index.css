@@ -119,3 +119,16 @@ input {
   cursor: pointer;
   color: white;
 }
+
+.submit-month {
+  padding: 0.15rem 0.75rem;
+  border-radius: 4px;
+  margin-top: 0.5rem;
+  margin-bottom: 0.25rem;
+  margin-left: 0.5rem;
+  outline: none;
+  border: 1px solid #b5b3ee;
+  background-color: #b5b3ee;
+  cursor: pointer;
+  color: white;
+}

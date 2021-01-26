@@ -70,7 +70,7 @@ function App() {
   }
 
   function removeTodo(id) {
-    setMonthTodos(prevMonthTodos => {
+    setMonthTodos((prevMonthTodos) => {
       const newMonthTodos = {}
       Object.keys(prevMonthTodos).forEach(function (k) {
         prevMonthTodos[k].forEach(function (t) {
@@ -170,6 +170,7 @@ function App() {
             onChange={onDateChange}
           />
           <button
+            className="btn submit-month"
             onClick={showMonthTodos}
             style={{ marginLeft: '0.5em' }}
             data-tip="Отобразить список за месяц"
