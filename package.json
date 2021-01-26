@@ -5,7 +5,10 @@
   "author": "Misha",
   "main": "public/electron.js",
   "build": {
-    "appId": "App.app"
+    "appId": "App.app",
+    "win": {
+      "icon": "./build/favicon.ico"
+    }
   },
   "homepage": "./",
   "dependencies": {
