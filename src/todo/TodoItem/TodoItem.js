@@ -11,8 +11,8 @@ const styles = {
     wordBreak: 'break-all',
     alignItems: 'center',
     padding: '.5rem 1rem',
-    border: '1px solid rgb(181, 179, 238)',
-    borderRadius: '4px',
+    border: '1px solid rgb(56, 135, 135)',
+    borderRadius: '2px',
     marginBottom: '.5rem',
   },
   input: {

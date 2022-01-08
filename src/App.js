@@ -161,7 +161,7 @@ function App() {
     <Context.Provider value={{ removeTodo }}>
       <div className="wrapper">
         <h1>
-          Ежедневник <Icon />
+          <Icon /> Список дел <Icon />
         </h1>
         <div>
           <input

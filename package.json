@@ -1,8 +1,8 @@
 {
-  "name": "eleonora-todo",
+  "name": "todo-list",
   "version": "1.0.0",
   "description": "App like app",
-  "author": "Eleonora",
+  "author": "Nora",
   "main": "public/electron.js",
   "build": {
     "appId": "App.app",
